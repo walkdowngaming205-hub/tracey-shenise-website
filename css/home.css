@@ -631,3 +631,83 @@
     font-size: 32px;
   }
 }
+/* MAKE TIKTOK SECTION FULL WIDTH */
+
+/* FIX TIKTOK EMBEDS */
+
+.tiktok {
+  background: #000;
+  padding: 80px 24px;
+}
+
+.tiktok__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.tiktok__card {
+  width: 325px;
+  height: 680px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111;
+}
+
+.tiktok__card blockquote,
+.tiktok__card iframe,
+.tiktok-embed {
+  width: 325px !important;
+  max-width: 325px !important;
+  min-width: 325px !important;
+  height: 680px !important;
+  margin: 0 !important;
+}
+.featuredTikToks{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  padding:80px 20px;
+  background:#000;
+}
+
+.featuredCard{
+  width:325px;
+}
+
+.featuredCard__info{
+  background:#111;
+  text-align:center;
+  padding:20px;
+  border:1px solid #ff4f9a;
+}
+
+.featuredCard__info h3{
+  color:#fff;
+  font-family:'Cinzel', serif;
+  margin-bottom:8px;
+}
+
+.featuredCard__info p{
+  color:#ff4f9a;
+  margin-bottom:15px;
+}
+
+.featuredCard__btn{
+  display:inline-block;
+  padding:12px 24px;
+  background:#ff4f9a;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:1px;
+  transition:.3s;
+}
+
+.featuredCard__btn:hover{
+  background:#fff;
+  color:#000;
+}
