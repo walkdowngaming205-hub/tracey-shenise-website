@@ -1,0 +1,332 @@
+/* =========================================================
+   TRACEY SHENISE — CART PAGE STYLES
+   Use only on cart.html
+   ========================================================= */
+
+/* =========================================================
+   CART PAGE (Luxury)
+   ========================================================= */
+
+.cartBody {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartPage {
+  flex: 1;
+  padding: 70px 18px 90px;
+  background: linear-gradient(to bottom, #fff, rgba(255, 42, 161, 0.03));
+}
+
+.cartPage__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.cartHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cartHeader__mini {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.cartHeader__title {
+  margin: 0 0 14px;
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: clamp(34px, 4vw, 64px);
+  line-height: 1.05;
+}
+
+.cartHeader__sub {
+  margin: 0 auto;
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.cartGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.cartItems,
+.cartSummary {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.cartItems__title,
+.cartSummary__title {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cartItem:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.cartItem__img {
+  width: 92px;
+  height: 92px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: radial-gradient(circle at top, rgba(255, 42, 161, 0.2), #000);
+}
+
+.cartItem__title {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.cartItem__price {
+  margin: 0;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.cartItem__total {
+  font-family: var(--serif);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.cartItem__controls {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.qtyBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.qtyBtn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.qtyNum {
+  min-width: 26px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.removeBtn {
+  margin-left: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.removeBtn:hover {
+  color: var(--pink);
+}
+
+.cartSummary__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.cartSummary__row--total {
+  font-weight: 900;
+  color: #000;
+}
+
+.cartSummary__buttons {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.cartBtn {
+  padding: 14px 16px;
+  border-radius: 999px;
+
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cartBtn--dark {
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.cartBtn--dark:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+.cartBtn--pink {
+  border: 1px solid var(--pink);
+  background: var(--pink);
+  color: #fff;
+}
+
+.cartBtn--pink:hover {
+  filter: brightness(0.95);
+}
+
+.cartBtn--ghost {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.cartBtn--ghost:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.cartSummary__note {
+  margin: 16px 0 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.cartEmpty {
+  padding: 30px 0 10px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .cartGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cartItem {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .cartItem__total {
+    display: none;
+  }
+}
+
+/* =========================================================
+   SHOP TOAST (Added to cart)
+   ========================================================= */
+.tsToast {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translateX(-50%) translateY(30px);
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+
+  color: rgba(255, 255, 255, 0.92);
+  padding: 14px 18px;
+  border-radius: 999px;
+
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.25s ease;
+}
+
+.tsToast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.about {
+  padding: 0; /* remove section padding */
+}
+
+.about__collageGrid {
+  width: 100%;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0; /* optional: removes spacing between images */
+}
+
+/* FORCE ALL IMAGES SAME SIZE */
+.about__collageGrid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.about__collageGrid img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .about__collageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,633 @@
+/* =========================================
+   TRACEY SHENISE — HOME PAGE STYLES
+   Use only on index.html
+   ========================================= */
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  position: relative;
+  height: calc(100vh - 58px);
+  min-height: 650px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 90px 18px;
+  height: 100%;
+
+  display: flex;              /* FIX */
+  flex-direction: column;     /* FIX */
+  justify-content: center;    /* vertical center */
+  align-items: center;        /* horizontal center */
+  text-align: center;         /* center text */
+}
+
+.hero__smallTitle {
+  margin: 0 0 10px;
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--serif);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.hero__bigTitle {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: clamp(56px, 7vw, 130px);
+  line-height: 0.9;
+}
+
+.hero__line {
+  margin: 24px 0 26px;
+  width: 520px;
+  max-width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero__btn {
+  display: inline-flex;
+  width: fit-content;
+  padding: 18px 28px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  color: #fff;
+  font-family: var(--serif);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 18px;
+
+  transition: 0.2s ease;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero__btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+.about {
+  background: #fff;
+  padding: 70px 18px;
+}
+
+.about__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.about__imageWrap {
+  position: relative;
+  min-height: 460px;
+}
+
+.about__img {
+  border-radius: 2px;
+  height: 100%;
+  max-height: 520px;
+}
+
+.about__tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 12px 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-family: var(--serif);
+}
+
+.about__tagTitle {
+  margin: 0;
+  font-size: 14px;
+}
+
+.about__tagSub {
+  margin: 4px 0 0;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.about__copy {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.about__bold {
+  color: var(--black);
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MARQUEE BAR (WORKING VERSION)
+   ========================================= */
+.marqueeBar {
+  width: 100%;
+  overflow: hidden;
+  background: #e7d4c8;
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.marqueeBar__inner {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  white-space: nowrap;
+  width: max-content;
+
+  animation: marqueeMove 10s linear infinite;
+}
+
+
+.marqueeBar__inner span {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================
+   YOUTUBE CAROUSEL (ts-carousel)
+   ========================================= */
+.tiktok {
+  padding: 60px 18px;
+  background: #000;
+}
+
+.tiktok__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* CARD */
+.tiktok__card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* VIDEO */
+.tiktok__card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.tiktok__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+}
+
+/* TITLE */
+.tiktok__title {
+  color: #fff;
+  font-family: var(--serif);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.tiktok__btn {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+
+  font-family: var(--serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 11px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tiktok__btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.seen {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.seen__header h2 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.seen__header p {
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+.seen__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.seen__card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.seen__card:hover {
+  transform: translateY(-8px);
+}
+
+.seen__card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.seen__card h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+}
+
+.seen__card p {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .seen__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================
+   WHO SECTIONS
+   ========================================= */
+.who {
+  background: var(--black);
+  color: #fff;
+  padding: 70px 18px;
+}
+
+.who__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.who__sideTitle h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 34px;
+  color: rgba(255, 42, 161, 0.7);
+}
+
+.who__sideTitle--right {
+  text-align: right;
+}
+
+.who__content {
+  position: relative;
+  padding: 10px 0;
+}
+
+.who__bigLetter {
+  position: absolute;
+  left: -30px;
+  top: -20px;
+  font-family: var(--serif);
+  font-size: 190px;
+  line-height: 1;
+  opacity: 0.1;
+}
+
+.who__list {
+  margin: 0;
+  padding-left: 22px;
+  font-size: 22px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.who__list li {
+  margin-bottom: 10px;
+}
+
+.who__line {
+  margin-top: 26px;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 42, 161, 0.45);
+}
+
+/* Flip layout */
+.who--not .who__inner {
+  grid-template-columns: 1fr 360px;
+}
+
+
+/* =========================================
+   3 COLUMN LEARN SECTION
+   ========================================= */
+.learn {
+  background: #fff;
+  padding: 0;
+}
+
+.learn__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.learn__col {
+  padding: 85px 18px;
+  text-align: center;
+}
+
+.learn__col h4 {
+  margin: 0 0 26px;
+  font-family: var(--serif);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.learn__col p {
+  margin: 0;
+  font-family: var(--serif);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  line-height: 2.2;
+}
+
+.learn__check {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--pink);
+}
+
+.learn__col--dark {
+  background: var(--black);
+  color: #fff;
+}
+
+.learn__col--light {
+  background: #fff;
+  color: var(--black);
+  border-left: 1px solid rgba(0, 0, 0, 0.14);
+  border-right: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.learn__check--dark {
+  color: var(--black);
+}
+
+
+.about {
+  padding: 0; /* remove section padding */
+}
+
+.about__collageGrid {
+  width: 100%;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0; /* optional: removes spacing between images */
+}
+
+/* FORCE ALL IMAGES SAME SIZE */
+.about__collageGrid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.about__collageGrid img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .about__collageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* HOME MOBILE FIXES */
+@media (max-width: 980px) {
+  .hero__content {
+    padding: 60px 18px;
+  }
+
+  .about__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .who__inner,
+  .who--not .who__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .who__sideTitle--right {
+    text-align: left;
+  }
+
+  .learn__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .learn__col--light {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero__bigTitle {
+    font-size: clamp(48px, 16vw, 90px);
+    text-align: center;
+    line-height: 0.95;
+  }
+
+  .hero__content {
+    padding: 0 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about__collageGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .tiktok__inner {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 30px 15px;
+  }
+
+  .tiktok__card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .seen__grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .seen__inner {
+    padding: 40px 20px;
+  }
+
+  .who__inner,
+  .who__content,
+  .who__content--flip {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who__sideTitle,
+  .who__sideTitle--right {
+    writing-mode: horizontal-tb;
+    transform: none;
+    text-align: center;
+  }
+
+  .who__sideTitle h3 {
+    font-size: 32px;
+  }
+
+  .who__list {
+    padding: 0 20px;
+  }
+
+  .learn__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .learn__col {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__collageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__bigTitle {
+    font-size: 52px;
+  }
+
+  .marqueeBar__inner span {
+    font-size: 14px;
+  }
+
+  .seen__header h2 {
+    font-size: 32px;
+  }
+}

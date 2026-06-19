@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop | Tracey Shenise</title>
 
-    <!-- Luxury fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,289 +12,237 @@
       rel="stylesheet"
     />
 
-    <!-- IMPORTANT: match your folder name -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/shop.css" />
   </head>
 
   <body class="shopBody">
-    <!-- TOP NAV -->
     <header class="topbar">
       <div class="topbar__inner">
         <div class="topbar__spacer"></div>
 
         <nav class="nav">
-          <a href="index.html#home">HOME</a>
-          <a href="shop.html">SHOP</a>
-          <a href="index.html#learn">WHAT YOU’LL LEARN</a>
-          <a href="index.html#contact">CONTACT</a>
+          <a href="index.html#home">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="index.html#learn">What You’ll Learn</a>
+          <a href="index.html#contact">Contact</a>
         </nav>
 
-        <!-- Cart goes to cart page now -->
         <a class="cart" href="cart.html">
           <span class="cart__icon">🛒</span>
-          <span>Shopping cart</span>
+          <span>Shopping Cart</span>
           <span class="cart__bubble" id="cartCount">0</span>
         </a>
       </div>
     </header>
 
-    <!-- SHOP HERO -->
-    <section class="shopHero">
-      <div class="shopHero__inner">
-        <p class="shopHero__mini">TRACEY SHENISE</p>
-
-        <h1 class="shopHero__title">SHOP THE COLLECTION</h1>
-
-        <p class="shopHero__sub">
-          Premium bundles, closures, and wigs — soft, full, true-to-length.
-          Luxury hair only.
-        </p>
-      </div>
-    </section>
-
-    <!-- SHOP GRID -->
-    <section class="shopPage">
-      <div class="shopPage__inner">
-        <div class="shopSearch">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search wigs, bundles..."
-    />
-    </div>
-        <!-- Filter buttons -->
-        <div class="shopFilters">
-          <button class="shopFilters__btn active" data-filter="all">
-            ALL
-          </button>
-          <button class="shopFilters__btn" data-filter="bundles">
-            BUNDLES
-          </button>
-          <button class="shopFilters__btn" data-filter="closures">
-            CLOSURES
-          </button>
-          <button class="shopFilters__btn" data-filter="wigs">WIGS</button>
+    <main>
+      <section class="shopHero">
+        <div class="shopHero__inner">
+          <p class="shopHero__mini">Tracey Shenise</p>
+          <h1 class="shopHero__title">Shop The Collection</h1>
+          <p class="shopHero__sub">
+            Premium bundles, closures, and wigs — soft, full, true-to-length.
+            Luxury hair only.
+          </p>
         </div>
+      </section>
 
-        <!-- GRID -->
-        <div class="shopPage__grid" id="shopGrid">
-          <!-- BUNDLE 1 -->
-          <article class="shopItem" data-type="bundles">
-            <img
-              class="shopItem__img"
-              src="images/bundle.jpg"
-              alt="Brazilian Straight"
+      <section class="luxShopControls">
+        <div class="luxShopControls__inner">
+          <div class="luxSearch">
+            <span>🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search wigs, bundles..."
             />
+          </div>
 
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">Brazilian Straight</h3>
-              <p class="shopItem__desc">Soft • Full • True Length</p>
-              <p class="shopItem__price">$89+</p>
+          <div class="shopFilters">
+            <button class="shopFilters__btn active" data-filter="all">All</button>
+            <button class="shopFilters__btn" data-filter="bundles">Bundles</button>
+            <button class="shopFilters__btn" data-filter="closures">Closures</button>
+            <button class="shopFilters__btn" data-filter="wigs">Wigs</button>
+          </div>
+        </div>
+      </section>
 
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="bundle1"
-                  data-title="Brazilian Straight"
-                  data-price="89"
-                  data-image="images/bundle.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=bundle1"
-                >
-                  View Details
-                </a>
-              </div>
+      <section class="luxShopPage">
+        <div class="luxShopGrid" id="shopGrid">
+          <article class="luxProduct" data-type="bundles">
+            <img src="images/bundle.jpg" alt="Brazilian Straight hair bundle" />
+            <div class="luxProduct__info">
+              <h3>Brazilian Straight</h3>
+              <p>Soft • Full • True Length</p>
+              <strong>$89+</strong>
+            </div>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="bundle1"
+                data-title="Brazilian Straight"
+                data-price="89"
+                data-image="images/bundle.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=bundle1">View Details</a>
             </div>
           </article>
 
-          <!-- BUNDLE 2 -->
-          <article class="shopItem" data-type="bundles">
-            <img class="shopItem__img" src="images/bundle.jpg" alt="Body Wave" />
-
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">Body Wave</h3>
-              <p class="shopItem__desc">Luxury Wave • Easy Style</p>
-              <p class="shopItem__price">$95+</p>
-
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="bundle2"
-                  data-title="Body Wave"
-                  data-price="95"
-                  data-image="images/bundle.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=bundle2"
-                >
-                  View Details
-                </a>
-              </div>
+          <article class="luxProduct" data-type="bundles">
+            <img src="images/bundle.jpg" alt="Body Wave hair bundle" />
+            <div class="luxProduct__info">
+              <h3>Body Wave</h3>
+              <p>Luxury Wave • Easy Style</p>
+              <strong>$95+</strong>
+            </div>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="bundle2"
+                data-title="Body Wave"
+                data-price="95"
+                data-image="images/bundle.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=bundle2">View Details</a>
             </div>
           </article>
 
-          <!-- CLOSURE 1 -->
-          <article class="shopItem" data-type="closures">
-            <img
-              class="shopItem__img"
-              src="images/closure.jpg"
-              alt="HD Lace Closure"
-            />
-
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">HD Lace Closure</h3>
-              <p class="shopItem__desc">Melted • Natural • Clean Parts</p>
-              <p class="shopItem__price">$79+</p>
-
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="closure1"
-                  data-title="HD Lace Closure"
-                  data-price="79"
-                  data-image="images/closure.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=closure1"
-                >
-                  View Details
-                </a>
-              </div>
+          <article class="luxProduct" data-type="closures">
+            <img src="images/closure.jpg" alt="HD Lace Closure" />
+            <div class="luxProduct__info">
+              <h3>HD Lace Closure</h3>
+              <p>Melted • Natural • Clean Parts</p>
+              <strong>$79+</strong>
+            </div>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="closure1"
+                data-title="HD Lace Closure"
+                data-price="79"
+                data-image="images/closure.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=closure1">View Details</a>
             </div>
           </article>
 
-          <!-- CLOSURE 2 -->
-          <article class="shopItem" data-type="closures">
-            <img
-              class="shopItem__img"
-              src="images/closure.jpg"
-              alt="Transparent Lace Closure"
-            />
-
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">Transparent Lace</h3>
-              <p class="shopItem__desc">Flawless Blend • HD Finish</p>
-              <p class="shopItem__price">$85+</p>
-
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="closure2"
-                  data-title="Transparent Lace"
-                  data-price="85"
-                  data-image="images/closure.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=closure2"
-                >
-                  View Details
-                </a>
-              </div>
+          <article class="luxProduct" data-type="closures">
+            <img src="images/closure.jpg" alt="Transparent Lace Closure" />
+            <div class="luxProduct__info">
+              <h3>Transparent Lace</h3>
+              <p>Flawless Blend • HD Finish</p>
+              <strong>$85+</strong>
+            </div>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="closure2"
+                data-title="Transparent Lace"
+                data-price="85"
+                data-image="images/closure.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=closure2">View Details</a>
             </div>
           </article>
 
-          <!-- WIG 1 -->
-          <article class="shopItem" data-type="wigs">
-            <img class="shopItem__img" src="images/wig.jpg" alt="Glueless Wig" />
-
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">Glueless Wig</h3>
-              <p class="shopItem__desc">Ready to Wear • Luxury Fit</p>
-              <p class="shopItem__price">$199+</p>
-
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="wig1"
-                  data-title="Glueless Wig"
-                  data-price="199"
-                  data-image="images/wig.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=wig1"
-                >
-                  View Details
-                </a>
-              </div>
+          <article class="luxProduct" data-type="wigs">
+            <img src="images/wig.jpg" alt="Glueless Wig" />
+            <div class="luxProduct__info">
+              <h3>Glueless Wig</h3>
+              <p>Ready to Wear • Luxury Fit</p>
+              <strong>$199+</strong>
+            </div>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="wig1"
+                data-title="Glueless Wig"
+                data-price="199"
+                data-image="images/wig.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=wig1">View Details</a>
             </div>
           </article>
 
-          <!-- WIG 2 -->
-          <article class="shopItem" data-type="wigs">
-            <img class="shopItem__img" src="images/wig.jpg" alt="HD Lace Wig" />
-
-            <div class="shopItem__body">
-              <h3 class="shopItem__title">HD Lace Wig</h3>
-              <p class="shopItem__desc">Melted Hairline • Full Look</p>
-              <p class="shopItem__price">$249+</p>
-
-              <div class="shopItem__actions">
-                <button
-                  class="shopItem__btn"
-                  data-add
-                  data-id="wig2"
-                  data-title="HD Lace Wig"
-                  data-price="249"
-                  data-image="images/wig.jpg"
-                >
-                  Add to Cart
-                </button>
-
-                <a
-                  class="shopItem__btn shopItem__btn--ghost"
-                  href="product.html?id=wig2"
-                >
-                  View Details
-                </a>
-              </div>
+          <article class="luxProduct" data-type="wigs">
+            <img src="images/wig.jpg" alt="HD Lace Wig" />
+            <div class="luxProduct__info">
+              <h3>HD Lace Wig</h3>
+              <p>Melted Hairline • Full Look</p>
+              <strong>$249+</strong>
             </div>
-          </article>
-
-          <!-- DEALS CARD -->
-          <article class="shopItem shopItem--dark" data-type="all">
-            <div class="shopItem__body">
-              <p class="shopItem__miniTop">LIMITED</p>
-              <h3 class="shopItem__dealTitle">DEALS</h3>
-              <p class="shopItem__dealText">
-                Shop bundles + closures with special pricing.
-              </p>
-
-              <a class="shopItem__btn shopItem__btn--light" href="cart.html">
-                Checkout Now
-              </a>
+            <div class="luxProduct__actions">
+              <button
+                data-add
+                data-id="wig2"
+                data-title="HD Lace Wig"
+                data-price="249"
+                data-image="images/wig.jpg"
+              >
+                Add to Cart
+              </button>
+              <a href="product.html?id=wig2">View Details</a>
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- FOOTER -->
+        <div class="luxPagination">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <span>...</span>
+          <button>Next</button>
+        </div>
+      </section>
+
+      <section class="shopTrustBar">
+        <div class="shopTrustBar__inner">
+          <div class="shopTrustItem">
+            <span class="shopTrustIcon">◇</span>
+            <div>
+              <h4>Premium Quality</h4>
+              <p>Luxury hair, guaranteed</p>
+            </div>
+          </div>
+
+          <div class="shopTrustItem">
+            <span class="shopTrustIcon">🚚</span>
+            <div>
+              <h4>Fast Shipping</h4>
+              <p>2-4 business days</p>
+            </div>
+          </div>
+
+          <div class="shopTrustItem">
+            <span class="shopTrustIcon">🛡</span>
+            <div>
+              <h4>Secure Payment</h4>
+              <p>100% safe & secure</p>
+            </div>
+          </div>
+
+          <div class="shopTrustItem">
+            <span class="shopTrustIcon">♡</span>
+            <div>
+              <h4>Customer Care</h4>
+              <p>We’re here to help</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer" id="contact">
       <div class="footer__inner">
         <p>Tracey Shenise. All Rights Reserved.</p>
@@ -303,7 +250,6 @@
       </div>
     </footer>
 
-    <!-- Shop JS (external file) -->
     <script src="shop.js"></script>
   </body>
 </html>
