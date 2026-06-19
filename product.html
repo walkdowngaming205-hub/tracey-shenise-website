@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product | Tracey Shenise</title>
+
+    <!-- Luxury fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- IMPORTANT: match your folder name -->
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+
+  <body class="shopBody">
+    <!-- TOP NAV -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__spacer"></div>
+
+        <nav class="nav">
+          <a href="index.html#home">HOME</a>
+          <a href="shop.html">SHOP</a>
+          <a href="index.html#learn">WHAT YOU’LL LEARN</a>
+          <a href="index.html#contact">CONTACT</a>
+        </nav>
+
+        <a class="cart" href="cart.html">
+          <span class="cart__icon">🛒</span>
+          <span>Shopping cart</span>
+          <span class="cart__bubble" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- PRODUCT -->
+    <section class="productPage">
+      <div class="productPage__inner">
+        <!-- LEFT IMAGE -->
+        <div class="productPage__media">
+          <img
+            id="productImage"
+            class="productPage__img"
+            src="images/bundle.jpg"
+            alt="Product"
+          />
+        </div>
+
+        <!-- RIGHT INFO -->
+        <div class="productPage__info">
+          <p class="productPage__mini" id="productType">BUNDLES</p>
+
+          <h1 class="productPage__title" id="productTitle">
+            Brazilian Straight
+          </h1>
+
+          <p class="productPage__price" id="productPrice">$89.00</p>
+
+          <p class="productPage__desc" id="productDesc">
+            Premium quality hair. Soft, full, true-to-length, and made to last.
+          </p>
+
+          <!-- OPTIONS -->
+          <div class="productPage__options">
+            <div class="productOption">
+              <label for="length">Length</label>
+              <select id="length">
+                <option>18"</option>
+                <option>20"</option>
+                <option>22"</option>
+                <option>24"</option>
+                <option>26"</option>
+                <option>28"</option>
+              </select>
+            </div>
+
+            <div class="productOption">
+              <label for="texture">Texture</label>
+              <select id="texture">
+                <option>Straight</option>
+                <option>Body Wave</option>
+                <option>Curly</option>
+              </select>
+            </div>
+
+            <div class="productOption">
+              <label for="quantity">Quantity</label>
+              <select id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- BUTTONS -->
+          <div class="productPage__actions">
+            <button class="productCTA" id="addToCartBtn">Add to Cart</button>
+            <a class="productGhost" href="shop.html">Back to Shop</a>
+          </div>
+
+          <!-- DETAILS -->
+          <div class="productDetails">
+            <div class="productDetails__row">
+              <span>Shipping</span>
+              <span>2–5 Business Days</span>
+            </div>
+            <div class="productDetails__row">
+              <span>Hair Type</span>
+              <span>100% Virgin Human Hair</span>
+            </div>
+            <div class="productDetails__row">
+              <span>Quality</span>
+              <span>No Shedding • No Tangles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+      <div class="footer__inner">
+        <p>Tracey Shenise. All Rights Reserved.</p>
+        <p class="footer__pink">Instagram • TikTok • Email</p>
+      </div>
+    </footer>
+
+    <script src="product.js"></script>
+  </body>
+</html>
